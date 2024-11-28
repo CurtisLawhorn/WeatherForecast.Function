@@ -1,11 +1,16 @@
+import os
 import requests
+from dotenv import find_dotenv, load_dotenv
+
+dotenv_path = find_dotenv()
+load_dotenv(dotenv_path)
+API_KEY = os.getenv("API_KEY")
 
 class WeatherForecast:
     def __init__(self, city):
         self.City = city.title()
 
     def GetForecast(self):
-        API_KEY = ""
         url = f"http://api.weatherapi.com/v1/current.json?key={API_KEY}&q={self.City}&aqi=no"
         response = requests.get(url)
         data = response.json()
