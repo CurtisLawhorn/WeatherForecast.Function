@@ -64,9 +64,9 @@ module "lambda_function" {
   }
 
   tags = {
-    Name        = "WeatherForecastApiPython.Function"
+    Name        = "WeatherForecastAPI-Python.Function"
     Environment = "Sandbox"
-    Repository  = "https://github.com/CurtisLawhorn/WeatherForecastApiPython.Function"
+    Repository  = "https://github.com/CurtisLawhorn/WeatherForecastAPI-Python.Function.git"
   }
 
   local_existing_package = "${path.module}/../../src/publish/publish.zip"
