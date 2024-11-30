@@ -19,10 +19,11 @@ class WeatherForecasts:
         print ("----------")
 
 def lambda_handler(event, context):
-    # TODO implement
+    weatherForecast = WeatherForecast("Clive")
+    forecast = weatherForecast.GetForecast()
     return {
         'statusCode': 200,
-        'body': json.dumps('Hello from Lambda!')
+        'body': json.dumps(forecast)
     }
 
 def main():
@@ -34,5 +35,3 @@ def main():
     
     weatherForecasts.DisplayCities()
     weatherForecasts.DisplayForecasts()
-
-main()

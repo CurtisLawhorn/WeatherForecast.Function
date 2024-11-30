@@ -1,0 +1,1 @@
+{"filename": "builds/b383293677bd94fbdbee436e248efa2cb69f8bd8c0e7751c8c90488cae7776f6.zip", "runtime": "python3.13", "artifacts_dir": "builds", "build_plan": [[["set:workdir", "../../src"], ["sh", "cd package\nzip -r ../runtime.zip .\ncd ../\nzip runtime.zip lambda_function.py\nzip runtime.zip weather_forecast.py"], ["zip:embedded"]]]}

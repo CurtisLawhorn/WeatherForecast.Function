@@ -1,0 +1,1 @@
+{"filename": "builds/b2ea7e502ca7c88bd52be2496a75b277dae8a06acf79ed6cb507954e9ec69547.zip", "runtime": "python3.13", "artifacts_dir": "builds", "build_plan": [[["set:workdir", "../../src"], ["sh", "mkdir publish\nzip -r publish/publish.zip package lambda_function.py weather_forecast.py\ncd publish"], ["zip:embedded"]]]}
