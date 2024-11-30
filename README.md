@@ -39,6 +39,21 @@ Trace logging (AWSLambdaTracerAccessExecutionPolicy)
         ]
     }
 }
+```
+
+Secrets Manager read access (SecretsManagerWeatherApiReadAccessPolicy)
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": "secretsmanager:GetSecretValue",
+            "Resource": "[YOUR-SECRETS-MANAGER-ARN]"
+        }
+    ]
+}
 ```  
 
 To deploy your function to AWS Lambda, run the below commands from the /hosting/src folder. 
